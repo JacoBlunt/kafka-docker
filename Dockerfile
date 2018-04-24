@@ -31,4 +31,5 @@ RUN apk add --no-cache bash curl jq docker \
 VOLUME ["/kafka"]
 
 # Use "exec" form so that it runs as PID 1 (useful for graceful shutdown)
-CMD ["start-kafka.sh"]
+#CMD ["start-kafka.sh"]
+COPY server1.properties server2.properties server3.properties server4.properties server5.properties server6.properties /opt/kafka_2.12-1.1.0/config
